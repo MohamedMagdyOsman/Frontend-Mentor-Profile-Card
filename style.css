@@ -1,0 +1,164 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* variables */
+:root {
+  /* priamry */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+
+  /* Neutral */
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+/* page reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+button:focus,
+button:active {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2 {
+  font-size: 1.8rem;
+}
+
+/* styles */
+main {
+  width: 100vw;
+  padding: 0 2rem;
+  min-height: 100vh;
+
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+}
+
+.profile_card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 7px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+.cover_photo {
+  width: 32rem;
+  max-width: 100%;
+  position: relative;
+
+  aspect-ratio: 2.5 / 1;
+  background-repeat: no-repeat;
+  background-image: url("./images/bg-pattern-card.svg");
+}
+
+.profile_photo {
+  position: absolute;
+  bottom: -40%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 0.5rem solid white;
+}
+
+.cover_body {
+  padding: 1.5rem 0;
+}
+
+.person_name {
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.person_name > span {
+  margin-left: 0.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.location {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--dark-grayish-blue);
+}
+
+hr {
+  height: 0.1rem;
+  margin-bottom: 2rem;
+
+  border: none;
+  opacity: 0.3;
+  background-color: var(--dark-gray);
+}
+
+.stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat > h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat > p {
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+}
